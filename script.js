@@ -1,3 +1,71 @@
+// Loading animation script
+document.addEventListener('DOMContentLoaded', function() {
+    const terminalText = document.getElementById('terminal-text');
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    
+    const messages = [
+      'Initializing system...',
+      'Establishing secure connection...',
+      'Loading core modules...',
+      'Running security protocols...',
+      'Decrypting data streams...',
+      'Calibrating neural interface...',
+      'Optimizing display parameters...',
+      'System check complete.',
+      'Welcome to my portfolio...'
+    ];
+    
+    let messageIndex = 0;
+    let charIndex = 0;
+    let typingInterval;
+  
+    function typeText() {
+      if (messageIndex < messages.length) {
+        const currentMessage = messages[messageIndex];
+        
+        if (charIndex < currentMessage.length) {
+          terminalText.textContent += currentMessage.charAt(charIndex);
+          charIndex++;
+        } else {
+          terminalText.textContent += '<br><br>';
+          messageIndex++;
+          charIndex = 0;
+          clearInterval(typingInterval);
+          
+          // Brief pause between messages
+          setTimeout(() => {
+            typingInterval = setInterval(typeText, 50); // Typing speed
+          }, 500);
+        }
+      } else {
+        // All messages typed, start fade out
+        setTimeout(() => {
+          document.body.classList.add('loaded');
+          
+          // Remove loader completely after fade animation
+          setTimeout(() => {
+            if (loaderWrapper) {
+              loaderWrapper.style.display = 'none';
+            }
+          }, 500);
+        }, 800);
+      }
+    }
+  
+    // Start typing animation
+    typingInterval = setInterval(typeText, 50);
+    
+    // Fallback in case something goes wrong with the animation
+    // This ensures the site becomes accessible even if there's an error
+    setTimeout(() => {
+      document.body.classList.add('loaded');
+    }, 8000); // Timeout after 8 seconds regardless
+  });
+  
+  // Rest of your existing script.js code below
+
+
+
 // Theme toggle functionality
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
