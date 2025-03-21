@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulara Abhiranda - Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* No Blog Notification Styles */
+        .no-blogs-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .sad-face {
+            font-size: 100px;
+            margin-bottom: 20px;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+            color: #5B9AFF; /* Blue color for the sad face */
+            text-shadow: 0 0 10px rgba(91, 154, 255, 0.5);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .tear {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #00C6FF; /* Bright blue for tears */
+            border-radius: 50%;
+            bottom: 15px;
+            opacity: 0;
+            box-shadow: 0 0 8px rgba(0, 198, 255, 0.8);
+        }
+
+        .tear-left {
+            left: 25px;
+            animation: tearDrop 4s 1s infinite;
+        }
+
+        .tear-right {
+            right: 25px;
+            animation: tearDrop 4s 2s infinite;
+        }
+
+        @keyframes tearDrop {
+            0% { opacity: 0; transform: translateY(0); }
+            10% { opacity: 1; }
+            70% { opacity: 1; transform: translateY(30px); }
+            100% { opacity: 0; transform: translateY(60px); }
+        }
+
+        .no-blogs-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #FF6B6B, #6B66FF); /* Vibrant gradient */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: titleFade 4s ease-in-out infinite;
+            text-shadow: 0 2px 10px rgba(107, 102, 255, 0.3);
+        }
+
+        @keyframes titleFade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .no-blogs-message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            max-width: 500px;
+        }
+
+        .coming-soon-badge {
+            background: linear-gradient(135deg, #FF6B6B, #6B66FF); /* Match title gradient */
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(107, 102, 255, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+
+        .coming-soon-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .notify-btn {
+            background: linear-gradient(to right, #FF6B6B, #6B66FF); /* Match other elements */
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(107, 102, 255, 0.3);
+        }
+
+        .notify-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .notify-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            margin: 15% auto;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideIn 0.4s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        .notify-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notify-form h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--heading-color);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .form-submit {
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Canvas for interactive background -->
+    <canvas id="background-canvas"></canvas>
+    
+    
+    <header>
+        <a href="index.html"><div class="logo">Dulara Abhiranda</div></a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dularaabhiranda21/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DularaAbhiranda/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/md.abhi.14418/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.hackerrank.com/profile/abhiranda21/" aria-label="HackerRanka"><i class="fab fa-hackerrank"></i></a>
+        </div>
+
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+        <br><br>
+        <div class="no-blogs-container">
+            
+            <h1 class="no-blogs-title">No Blogs Yet</h1>
+            <p class="no-blogs-message">I'm currently working on some exciting tech articles and personal insights that I can't wait to share with you. The blog section is under construction, but great content is on the way!</p>
+            <div class="coming-soon-badge">Coming Soon!</div><br><br>
+            <button class="notify-btn" id="notifyBtn">Notify Me When Available</button>
+        </div>
+
+        <!-- Notification Modal -->
+        <div id="notifyModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <form class="notify-form" id="notifyForm">
+                    <h3>Get Notified</h3>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="form-submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Dulara Abhiranda</p>
+        <p>Version 2.0 | Built with HTML | CSS | JS</p>
+        <a href="#" class="view-source">View Source <i class="fab fa-github"></i></a>
+    </footer>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById("notifyModal");
+        const notifyBtn = document.getElementById("notifyBtn");
+        const closeModal = document.getElementById("closeModal");
+        const notifyForm = document.getElementById("notifyForm");
+
+        notifyBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        notifyForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // Here you would normally send this data to your backend
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            
+            // For now, just show an alert
+            alert(`Thanks ${name}! We'll notify you at ${email} when the blog launches.`);
+            modal.style.display = "none";
+            notifyForm.reset();
+        });
+
+        // Theme toggle functionality (assumes this is in your script.js)
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check stored theme preference or default to dark theme
+        const currentTheme = localStorage.getItem('theme') || 'dark-theme';
+        body.className = currentTheme;
+        
+        // Update icon based on current theme
+        if (currentTheme === 'light-theme') {
+            icon.className = 'fas fa-sun';
+        } else {
+            icon.className = 'fas fa-moon';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-theme')) {
+                body.classList.replace('dark-theme', 'light-theme');
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'light-theme');
+            } else {
+                body.classList.replace('light-theme', 'dark-theme');
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'dark-theme');
+            }
+        });
+    </script>
+</body>
+</html>

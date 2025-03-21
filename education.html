@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulara Abhiranda - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Canvas for interactive background -->
+    <canvas id="background-canvas"></canvas>
+    
+    <header>
+        <a href="index.html"><div class="logo">Dulara Abhiranda</div></a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dularaabhiranda21/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DularaAbhiranda/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/md.abhi.14418/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.hackerrank.com/profile/abhiranda21/" aria-label="HackerRanka"><i class="fab fa-hackerrank"></i></a>
+            
+        </div>
+
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        
+    </header>
+
+    <main>
+        <section class="education-hero">
+            <h1>Academic Education</h1>
+            <p>Discover the stages of my academic learning journey.</p>
+        </section>
+    
+        <section class="education-grid">
+            <div class="education-card">
+                <div class="education-logo">
+                    <img src="./assets/logos/usjp.jpg" alt="UOSJ Logo">
+                </div>
+                <div class="education-details">
+                    <h2>Bachelor of Information and Communcation Technology</h2>
+                    <h3>University of Sri Jayewardenepura</h3>
+                    <p class="education-date">OCT 2022 - Present</p>
+                    <p class="education-location">Sri Lanka</p>
+                    <div class="education-divider"></div>
+                    <p class="education-status">In Progress</p>
+                </div>
+            </div>
+    
+            <div class="education-card">
+                <div class="education-logo">
+                    <img src="./assets/logos/sliit.png" alt="SLIIT logo">
+                </div>
+                <div class="education-details">
+                    <h2>Cisco Certified Network Academy</h2>
+                    <h3>Sri Lanka Institute of Information Technology</h3>
+                    <p class="education-date">Jun 2024 - Present</p>
+                    <p class="education-location">Sri lanka</p>
+                    <div class="education-divider"></div>
+                    <p class="education-status">In Progress</p>
+                </div>
+            </div>
+    
+            <div class="education-card">
+                <div class="education-logo">
+                    <img src="./assets/logos/senanayake.png" alt="SNC logo">
+                </div>
+                <div class="education-details">
+                    <h2>GCE Advanced Level</h2>
+                    <h3>Ch/Senanayake National College</h3>
+                    <p class="education-date">Apr 2018 - Aug 2020 ·</p>
+                    <p class="education-location">Sri Lanka</p>
+                    <div class="education-divider"></div>
+                    <p class="education-status">Completed</p>
+                </div>
+            </div>
+    
+            
+        </section>
+
+
+        <!-- Badges Section -->
+        <section class="badges-section">
+            <h2 class="section-heading">My Professional Badges</h2>
+            <p class="section-subheading">Achievements and recognitions earned through learning platforms</p>
+            
+            <div class="badges-container">
+                <div class="badge-item">
+                    <img src="./assets/badges/aws-cloud-practitioner.png" alt="AWS Cloud Practitioner">
+                    <span class="badge-name">AWS Cloud Practitioner</span>
+                </div>
+                <div class="badge-item">
+                    <img src="./assets/badges/azure-fundamentals.png" alt="Azure Fundamentals">
+                    <span class="badge-name">Azure Fundamentals</span>
+                </div>
+                <div class="badge-item">
+                    <img src="./assets/badges/comptia-security.png" alt="CompTIA Security+">
+                    <span class="badge-name">CompTIA Security+</span>
+                </div>
+                <div class="badge-item">
+                    <img src="./assets/badges/python-developer.png" alt="Python Developer">
+                    <span class="badge-name">Python Developer</span>
+                </div>
+                <div class="badge-item">
+                    <img src="./assets/badges/cisco-ccna.png" alt="Cisco CCNA">
+                    <span class="badge-name">Cisco CCNA</span>
+                </div>
+                <div class="badge-item">
+                    <img src="./assets/badges/ethical-hacker.png" alt="Ethical Hacker">
+                    <span class="badge-name">Ethical Hacker</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications-section">
+            <h2 class="section-heading">Professional Certifications</h2>
+            <p class="section-subheading">Credentials that demonstrate my technical expertise and continuous learning</p>
+            
+            <div class="certification-slider-container">
+                <div class="slider-controls">
+                    <button class="slider-arrow prev-arrow" aria-label="Previous certification">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-arrow next-arrow" aria-label="Next certification">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="certification-slider">
+                    <div class="certification-slide">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="./assets/logos/hackerrank.svg" alt="HackerRank">
+                            </div>
+                            <div class="certification-details">
+                                <h3>Software Engineer Intern Certificate</h3>
+                                <p class="certification-issuer">HackerRank</p>
+                                <p class="certification-date">Issued Feb 2025 • </p>
+                                <div class="certification-divider"></div>
+                                <div class="certification-skills">
+                                    <span class="skill-tag">Software Development </span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Problem Solving</span>
+                                </div>
+                                <a href="https://www.hackerrank.com/certificates/iframe/28c6bd4ef335" class="view-credential-btn">View Credential <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-slide">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="./assets/logos/hackerrank.svg" alt="HackerRank">
+                            </div>
+                            <div class="certification-details">
+                                <h3>Software Engineer Certificate</h3>
+                                <p class="certification-issuer">HackerRank</p>
+                                <p class="certification-date">Issued Mar 2025 • </p>
+                                <div class="certification-divider"></div>
+                                <div class="certification-skills">
+                                    <span class="skill-tag">Software Dev</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Problem Solving</span>
+                                </div>
+                                <a href="https://www.hackerrank.com/certificates/iframe/b72313f72d6e" class="view-credential-btn">View Credential <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-slide">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="./assets/logos/aws.png" alt="AWS Logo">
+                            </div>
+                            <div class="certification-details">
+                                <h3>AWS Certified Cloud Practitioner</h3>
+                                <p class="certification-issuer">Amazon Web Services</p>
+                                <p class="certification-date">Issued Jan 2024 • Expires Jan 2027</p>
+                                <div class="certification-divider"></div>
+                                <div class="certification-skills">
+                                    <span class="skill-tag">Cloud Computing</span>
+                                    <span class="skill-tag">AWS Services</span>
+                                    <span class="skill-tag">Cloud Security</span>
+                                </div>
+                                <a href="#" class="view-credential-btn">View Credential <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-slide">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="./assets/logos/microsoft.png" alt="Microsoft Logo">
+                            </div>
+                            <div class="certification-details">
+                                <h3>Microsoft Azure Fundamentals</h3>
+                                <p class="certification-issuer">Microsoft</p>
+                                <p class="certification-date">Issued Nov 2023 • No Expiration</p>
+                                <div class="certification-divider"></div>
+                                <div class="certification-skills">
+                                    <span class="skill-tag">Azure</span>
+                                    <span class="skill-tag">Cloud Services</span>
+                                    <span class="skill-tag">Cloud Security</span>
+                                </div>
+                                <a href="#" class="view-credential-btn">View Credential <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-dots">
+                    <!-- Dots will be dynamically generated with JS -->
+                </div>
+            </div>
+            
+            <div class="see-more-container">
+                <a href="certifications.html" class="see-more-btn">
+                    See All Certifications
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+
+
+        <!-- Stat section -->
+
+        <section class="stats-section">
+            <h2 class="stats-heading">Platform Statistics</h2>
+            <p class="stats-subheading">My performance and activity across various tech platforms</p>
+            
+            <div class="stats-grid">
+                <!-- GitHub Stats Card -->
+                <div class="stats-card github-card">
+                    <div class="stats-header">
+                        <div class="stats-logo">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                    </div>
+                    <div class="stats-compact-grid">
+                        <div class="stat-box">
+                            <span class="stat-value" id="github-repos">15</span>
+                            <span class="stat-label">Repositories</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="github-stars">28</span>
+                            <span class="stat-label">Stars</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="github-contributions">342</span>
+                            <span class="stat-label">Contributions</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="github-followers">24</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/DularaAbhiranda/" class="stats-link">View Profile <i class="fas fa-external-link-alt"></i></a>
+                </div>
+        
+                <!-- TryHackMe Stats Card -->
+                <div class="stats-card tryhackme-card">
+                    <div class="stats-header">
+                        <div class="stats-logo">
+                            <img src="./assets/logos/tryhackme.png" alt="TryHackMe Logo">
+                        </div>
+                        <h3>TryHackMe</h3>
+                    </div>
+                    <div class="stats-compact-grid">
+                        <div class="stat-box">
+                            <span class="stat-value" id="thm-rank">12,458</span>
+                            <span class="stat-label">Rank</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="thm-rooms">37</span>
+                            <span class="stat-label">Rooms</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="thm-badges">8</span>
+                            <span class="stat-label">Badges</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="thm-streak">15</span>
+                            <span class="stat-label">Streak</span>
+                        </div>
+                    </div>
+                    <a href="https://tryhackme.com/p/YourUsername" class="stats-link">View Profile <i class="fas fa-external-link-alt"></i></a>
+                </div>
+        
+                <!-- HackTheBox Stats Card -->
+                <div class="stats-card hackthebox-card">
+                    <div class="stats-header">
+                        <div class="stats-logo">
+                            <img src="./assets/logos/hackthebox.png" alt="HackTheBox Logo">
+                        </div>
+                        <h3>HackTheBox</h3>
+                    </div>
+                    <div class="stats-compact-grid">
+                        <div class="stat-box">
+                            <span class="stat-value" id="htb-rank">Hacker</span>
+                            <span class="stat-label">Level</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="htb-systems">18</span>
+                            <span class="stat-label">Systems</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="htb-challenges">12</span>
+                            <span class="stat-label">Challenges</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="htb-points">250</span>
+                            <span class="stat-label">Points</span>
+                        </div>
+                    </div>
+                    <a href="https://app.hackthebox.com/profile/YourUsername" class="stats-link">View Profile <i class="fas fa-external-link-alt"></i></a>
+                </div>
+        
+                <!-- HackerRank Stats Card -->
+                <div class="stats-card hackerrank-card">
+                    <div class="stats-header">
+                        <div class="stats-logo">
+                            <i class="fab fa-hackerrank"></i>
+                        </div>
+                        <h3>HackerRank</h3>
+                    </div>
+                    <div class="stats-compact-grid">
+                        <div class="stat-box">
+                            <span class="stat-value" id="hr-rank">5 ★</span>
+                            <span class="stat-label">Rank</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="hr-problems">125</span>
+                            <span class="stat-label">Problems</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value" id="hr-certificates">3</span>
+                            <span class="stat-label">Certificates</span>
+                        </div>
+                        <div class="stat-box badge-box">
+                            <span class="badge-mini python">Python</span>
+                            <span class="badge-mini java">Java</span>
+                            <span class="stat-label">Skills</span>
+                        </div>
+                    </div>
+                    <a href="https://www.hackerrank.com/profile/abhiranda21/" class="stats-link">View Profile <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Dulara Abhiranda</p>
+        <p>Version 2.0 | Built with HTML | CSS | JS</p>
+        <a href="#" class="view-source">View Source <i class="fab fa-github"></i></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
