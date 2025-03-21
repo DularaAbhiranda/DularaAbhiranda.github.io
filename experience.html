@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulara Abhiranda - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Canvas for interactive background -->
+    <canvas id="background-canvas"></canvas>
+    
+    <header>
+        <a href="index.html"><div class="logo">Dulara Abhiranda</div></a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html" >Education</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dularaabhiranda21/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DularaAbhiranda/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/md.abhi.14418/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.hackerrank.com/profile/abhiranda21/" aria-label="HackerRanka"><i class="fab fa-hackerrank"></i></a>
+            
+        </div>
+
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        
+    </header>
+
+    <main>
+        <!-- Featured Projects Section -->
+        <section class="featured-projects">
+            <h1>Featured Projects</h1>
+            <p>Check out some of the projects I've worked on.</p>
+            
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/projects/safeguard.png" alt="Driver Sleep Detection Application">
+                    </div>
+                    <div class="project-content">
+                        <h2>Driver Sleep Detection Application</h2>
+                        <p>A machine learning model that detects driver drowsiness, activates an alarm, and provides nearby rest locations on a map for safety.</p>
+                        <div class="project-tech">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/dularaabhiranda21_driveguard-roadsafety-artificialintelligence-activity-7304393195134623744-RD_F?utm_source=share&utm_medium=member_desktop&rcm=ACoAADy1oUoBmtDDj-FSTjHD8AAKzPvyni8sd_0" class="btn-primary">View Demo</a>
+                            <a href="https://github.com/DularaAbhiranda/DriveGuard-Drowsiness-Detection" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/projects/careerpulse.png" alt="CAREERPULSE">
+                    </div>
+                    <div class="project-content">
+                        <h2>CAREERPULSE</h2>
+                        <p>A mobile app developed for university students to find internships, featuring CV uploads, job preference selection, and personalized internship recommendations via LinkedIn API integration.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>GPT APIs</span>
+                            <span>Azure</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/dularaabhiranda21_careerpulse-futureleaders-innovationineducation-activity-7259993149630996480-KBaO?utm_source=share&utm_medium=member_desktop&rcm=ACoAADy1oUoBmtDDj-FSTjHD8AAKzPvyni8sd_0" class="btn-primary">View Demo</a>
+                            <a href="https://github.com/DularaAbhiranda/CareerPulse-Mobile-Application" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/projects/ctfplatform.png" alt="CTF Platform">
+                    </div>
+                    <div class="project-content">
+                        <h2>CTF Platform</h2>
+                        <p>A web application simulating CTF challenges to test system resource limits and defense mechanisms, integrated with an interactive defense challenge.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Electron</span>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/dularaabhiranda21_ctf-capturetheflag-cybersecurity-activity-7286109983941804032-XQb6?utm_source=share&utm_medium=member_desktop&rcm=ACoAADy1oUoBmtDDj-FSTjHD8AAKzPvyni8sd_0" class="btn-primary">View Demo</a>
+                            <a href="https://github.com/DularaAbhiranda/cyber_ctf_challenges" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/projects/sparkChat.png" alt="SparkChat">
+                    </div>
+                    <div class="project-content">
+                        <h2>Online Chat Applicationa</h2>
+                        <p>Online Chat Application developed by experence the Ballerina for Backend. WSO2 Hackthon project</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>MongoDB</span>
+                            <span>Ballerina</span>
+                            <span>NextJS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/dularaabhiranda21_sparkchat-wso2-realtimemessaging-activity-7254748310857527296-uWXN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADy1oUoBmtDDj-FSTjHD8AAKzPvyni8sd_0" class="btn-primary">View Demo</a>
+                            <a href="https://lnkd.in/gcVTX2Mh" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/projects/resumekeyword.png" alt="Resume Keyword Extract ML Model">
+                    </div>
+                    <div class="project-content">
+                        <h2>Resume Keyword Extract ML Model</h2>
+                        <p>A machine learning model that extracts and analyzes keywords from resumes to optimize resume evaluation and improve job matching.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Kaggle Notebook</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/dularaabhiranda21_opensource-machinelearning-datascience-activity-7215164500436471809-l3YW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADy1oUoBmtDDj-FSTjHD8AAKzPvyni8sd_0" class="btn-primary">View Demo</a>
+                            <a href="https://github.com/DularaAbhiranda/CV-Skill-Extractor" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/projects/smartCafetria.png" alt="Smart Cafeteria Automation System">
+                    </div>
+                    <div class="project-content">
+                        <h2>Smart Cafeteria Automation System</h2>
+                        <p>Built an IoT-enabled cafeteria automation system incorporating real-time communication for streamlined operations and efficiency in managing cafeteria processes.</p>
+                        <div class="project-tech">
+                            <span>IoT Devices</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/dularaabhiranda21_smartcafeteria-automation-digitalcontrolsystem-activity-7178119664500158465-lKdV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADy1oUoBmtDDj-FSTjHD8AAKzPvyni8sd_0" class="btn-primary">View Demo</a>
+                            <a href="https://github.com/DularaAbhiranda?tab=repositories&q=&type=&language=&sort=" class="btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="view-all-container">
+                <p>Interesting to see more projects? Check out all my projects here.</p>
+                <a href="https://github.com/DularaAbhiranda?tab=repositories" class="btn-view-all">View All Projects</a>
+            </div>
+        </section>
+
+        <!-- Tools and Technologies Section -->
+        
+        <section class="tools-section">
+            <h1>Tools & Technologies</h1>
+            <p>I love using a variety of tools to enhance my work. Here are some of them.</p>
+            
+            <div class="tech-category">
+                <h2>Frontend & Backend Development</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-html5" style="color: #E34F26;"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-bootstrap" style="color: #7952B3;"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-wind" style="color: #06B6D4;"></i>
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+                        <span>React.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-node-js" style="color: #68A063;"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-angular" style="color: #DD0031;"></i>
+                        <span>AngularJS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-java" style="color: #007396;"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code" style="color: #FF4500;"></i>
+                        <span>Ballerina</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-flutter" style="color: #02569B;"></i>
+                        <span>Flutter</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h2>Cloud, BaaS, Database & CI/CD Management</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-aws" style="color: #FF9900;"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-microsoft" style="color: #00A4EF;"></i>
+                        <span>Azure</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-google" style="color: #4285F4;"></i>
+                        <span>Google Cloud</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-firebase" style="color: #FFCA28;"></i>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database" style="color: #47A248;"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database" style="color: #336791;"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-github" style="color: #181717;"></i>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h2>Artificial Intelligence & Machine Learning</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-brain" style="color: #FF5722;"></i>
+                        <span>Scikit-learn</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-eye" style="color: #00BCD4;"></i>
+                        <span>OpenCV</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-microchip" style="color: #673AB7;"></i>
+                        <span>Azure AI</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database" style="color: #20BEFF;"></i>
+                        <span>Kaggle Notebooks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h2>Code Editors & IDEs</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fas fa-code" style="color: #007ACC;"></i>
+                        <span>Visual Studio Code</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-laptop-code" style="color: #5C2D91;"></i>
+                        <span>Visual Studio</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-android" style="color: #3DDC84;"></i>
+                        <span>Android Studio</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-lightbulb" style="color: #000000;"></i>
+                        <span>IntelliJ IDEA</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-flask" style="color: #21D789;"></i>
+                        <span>PyCharm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Community Engagement Section -->
+        <section class="community-section">
+            <h1>Community Engagement</h1>
+            <p>These are my favorite tech communities I've been involved with.</p>
+            
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="community-logo">
+                        <img src="./assets/logos/icts-logo.png" alt="ICTS">
+                    </div>
+                    <div class="community-details">
+                        <h2>Vice President (Event Division) </h2>
+                        <h3>Information and Communication Technology Society, UOSJ</h3>
+                        <p class="community-date">Oct 2024 - Present · </p>
+                        <p class="community-location">University of Sri Jayewardenepura</p>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-logo">
+                        <img src="./assets/logos/cryptx-logo-updated.png" alt="CryptX 1.0">
+                    </div>
+                    <div class="community-details">
+                        <h2>Event Coordinator</h2>
+                        <h3>CryptX 1.0</h3>
+                        <p class="community-date">Dec 2024 - Feb 2025 · </p>
+                        <p class="community-location">University of Sri Jayewardenepura</p>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-logo">
+                        <img src="./assets/logos/ieeestudentbranchusjp.png" alt="ieee-uosj">
+                    </div>
+                    <div class="community-details">
+                        <h2>Member</h2>
+                        <h3> IEEE Student Branch, University of Sri Jayewardenepura</h3>
+                        <p class="community-date">Jan 2024 - Present · </p>
+                        <p class="community-location">UOSJ,Sri Lanka</p>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-logo">
+                        <img src="./assets/logos/globalGIS.png" alt="Surveyor Assistant">
+                    </div>
+                    <div class="community-details">
+                        <h2>Surveyor Assistant  </h2>
+                        <h3>GLOBAL GIS PVT LTD. Nugegoda, Sri Lanka</h3>
+                        <p class="community-date">Jan 2021 - Aug 2022 ·</p>
+                        <p class="community-location">Nugegoda, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        
+
+    <footer>
+        <p>Copyright © 2024 Dulara Abhiranda</p>
+        <p>Version 2.0 | Built with HTML | CSS | JS</p>
+        <a href="#" class="view-source">View Source <i class="fab fa-github"></i></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

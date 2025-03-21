@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulara Abhiranda - Connect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="connect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Canvas for interactive background -->
+    <canvas id="background-canvas"></canvas>
+    
+    <header>
+        <a href="index.html"><div class="logo">Dulara Abhiranda</div></a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="connect.html" class="active">Connect</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dularaabhiranda21/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DularaAbhiranda/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/md.abhi.14418/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.hackerrank.com/profile/abhiranda21/" aria-label="HackerRanka"><i class="fab fa-hackerrank"></i></a>
+        </div>
+
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="connect-section">
+            <h1>Connect</h1>
+            <p class="connect-subtitle">Connect with me through social media and other communication channels.</p>
+            
+            <div class="connect-container">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name here (e.g. Dulara Abhiranda)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email here (e.g. contact@abhiranda.com)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Enter your subject here (e.g. Just saying Hi!)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Enter your message here (e.g. Hello Abhiranda! I'd like to say Hi!)"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submit-form">Submit</button>
+                </div>
+                
+                <div class="social-connections">
+                    <div class="social-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>abhiranda21@gmail.com</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fab fa-twitter"></i>
+                        <h3>X (Twitter)</h3>
+                        <p>ABHIranda</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>ABHIranda</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube</h3>
+                        <p>Cybersona</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>in/abhiranda21</p>
+                    </div>
+                    
+                    <div class="social-card">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram</h3>
+                        <p>Dulara Abhiranda</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Dulara Abhiranda</p>
+        <p>Version 2.0 | Built with HTML | CSS | JS</p>
+        <a href="#" class="view-source">View Source <i class="fab fa-github"></i></a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="connect.js"></script>
+</body>
+</html>
