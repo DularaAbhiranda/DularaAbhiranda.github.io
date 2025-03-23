@@ -1034,7 +1034,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     url = `https://github.com/${username}`;
                     break;
                 case 'YouTube':
-                    url = `https://youtube.com/${username}`;
+                    url = `https://www.youtube.com/@CybersonaLK`;
                     break;
                 case 'LinkedIn':
                     url = `https://linkedin.com/${username}`;
